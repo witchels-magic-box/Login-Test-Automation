@@ -56,8 +56,6 @@ public class Logcsv extends BaseDriver {
 			try {
 				homePage.LogOut();
 				
-//				boolean Signout = homePage.CheckLogout();
-//				Assert.assertEquals(Signout, CheckTrue);
 
 				System.out.println(Username1 + " and Password: " + Pass + " is Passed");
 				Result = "Pass";
@@ -65,22 +63,13 @@ public class Logcsv extends BaseDriver {
 				List<String[]> data = new ArrayList<String[]>();
 				data.add(new String[] {Username1,Pass,Result});
 				csvOutput.writeAll(data);
-				
-//				Result = "PASS";
-				
 
-
-//				cell = row.createCell(2);
-//				cell.setCellValue(Result);
 
 			} catch (Exception e) {
-//					boolean Msg = homePage.Errordisplay();
-//					boolean CheckFalse = true;
-//					Assert.assertEquals(Msg, CheckFalse)
+
 
 				Result = "Fail";
 				System.out.println(Username1 + " and Password: " + Pass + " is Failed");
-//				Result = "FAIL";
 				homePage.clickOnSignIn();
 
 				List<String[]> data = new ArrayList<String[]>();
